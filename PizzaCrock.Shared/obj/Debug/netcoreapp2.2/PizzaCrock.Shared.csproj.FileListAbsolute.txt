@@ -1,0 +1,9 @@
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\bin\Debug\netcoreapp2.2\PizzaCrock.Shared.deps.json
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\bin\Debug\netcoreapp2.2\PizzaCrock.Shared.dll
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\bin\Debug\netcoreapp2.2\PizzaCrock.Shared.pdb
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\obj\Debug\netcoreapp2.2\PizzaCrock.Shared.csproj.CoreCompileInputs.cache
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\obj\Debug\netcoreapp2.2\PizzaCrock.Shared.AssemblyInfoInputs.cache
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\obj\Debug\netcoreapp2.2\PizzaCrock.Shared.AssemblyInfo.cs
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\obj\Debug\netcoreapp2.2\PizzaCrock.Shared.dll
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\obj\Debug\netcoreapp2.2\PizzaCrock.Shared.pdb
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Shared\obj\Debug\netcoreapp2.2\PizzaCrock.Shared.csprojAssemblyReference.cache

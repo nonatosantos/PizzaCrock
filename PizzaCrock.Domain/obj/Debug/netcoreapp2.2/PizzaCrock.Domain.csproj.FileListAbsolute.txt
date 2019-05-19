@@ -1,0 +1,16 @@
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\PizzaCrock.Domain.deps.json
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\PizzaCrock.Domain.runtimeconfig.json
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\PizzaCrock.Domain.runtimeconfig.dev.json
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\PizzaCrock.Domain.dll
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\PizzaCrock.Domain.pdb
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\PizzaCrock.Shared.dll
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\PizzaCrock.Shared.pdb
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2\PizzaCrock.Domain.csprojAssemblyReference.cache
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2\PizzaCrock.Domain.csproj.CoreCompileInputs.cache
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2\PizzaCrock.Domain.AssemblyInfoInputs.cache
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2\PizzaCrock.Domain.AssemblyInfo.cs
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2\PizzaCrock.Domain.csproj.CopyComplete
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2\PizzaCrock.Domain.dll
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2\PizzaCrock.Domain.pdb
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
