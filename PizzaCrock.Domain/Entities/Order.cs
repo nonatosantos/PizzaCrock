@@ -16,8 +16,7 @@ namespace PizzaCrock.Domain.Entities
             SizeId = sizeId;
             _additionals = new List<Additional>();       
           
-        }    
-
+        }
 
         public DateTime DateOrder { get; set; }
         public int SizeId { get; set; }

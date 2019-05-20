@@ -47,19 +47,15 @@ namespace PizzaCrock.Infra.Repositories
                Size = x.Size.SizeValue,
                FlavorId = x.Flavor.Id,
                Flavor = x.Flavor.Description,
-               TotalPrice = x.Size.Price + soma(),
-               PreparationTime = x.Size.PreparationTime + x.Flavor.AdditionalMinutes + CalculateTimeTotal()
+               TotalPrice = x.Size.Price + CalculatePriceAdditional(),
+               PreparationTime = x.Size.PreparationTime + x.Flavor.AdditionalMinutes + CalculateAdditionalTime()
                  })
 
                  .AsNoTracking().ToList();     
             
      
         }
-
-        public void Delete(int id)
-        {
-            throw new System.NotImplementedException();
-        }
+     
 
         public OrderViewModel GetById(int id)
         {
@@ -74,13 +70,13 @@ namespace PizzaCrock.Infra.Repositories
                 Size = x.Size.SizeValue,
                 FlavorId = x.Flavor.Id,
                 Flavor = x.Flavor.Description,
-                TotalPrice = x.Size.Price + soma(),
-                PreparationTime = x.Size.PreparationTime + x.Flavor.AdditionalMinutes + CalculateTimeTotal()                
+                TotalPrice = x.Size.Price + CalculatePriceAdditional(),
+                PreparationTime = x.Size.PreparationTime + x.Flavor.AdditionalMinutes + CalculateAdditionalTime()                
             }).AsNoTracking().First();
 
         }
 
-        public decimal soma()
+        public decimal CalculatePriceAdditional()
         {
             List<Order> orders = _context.Orders.ToList();
             var add = from p in orders
@@ -95,7 +91,7 @@ namespace PizzaCrock.Infra.Repositories
             
         }
 
-        public int CalculateTimeTotal()
+        public int CalculateAdditionalTime()
         {
             List<Order> orders = _context.Orders.ToList();
             var additional = from p in orders

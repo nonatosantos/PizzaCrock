@@ -21,14 +21,13 @@ namespace PizzaCrock.Api.Controllers
             _context = context;
         }
 
-        // GET: api/Flavors
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Flavor>>> GetFlavors()
         {
             return await _context.Flavors.ToListAsync();
         }
 
-        // GET: api/Flavors/5
+    
         [HttpGet("{id}")]
         public async Task<ActionResult<Flavor>> GetFlavor(int id)
         {
@@ -42,7 +41,7 @@ namespace PizzaCrock.Api.Controllers
             return flavor;
         }
 
-        // PUT: api/Flavors/5
+     
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFlavor(int id, Flavor flavor)
         {
@@ -72,7 +71,7 @@ namespace PizzaCrock.Api.Controllers
             return NoContent();
         }
 
-        // POST: api/Flavors
+     
         [HttpPost]
         public async Task<ActionResult<Flavor>> PostFlavor(Flavor flavor)
         {
@@ -82,7 +81,7 @@ namespace PizzaCrock.Api.Controllers
             return CreatedAtAction("GetFlavor", new { id = flavor.Id }, flavor);
         }
 
-        // DELETE: api/Flavors/5
+   
         [HttpDelete("{id}")]
         public async Task<ActionResult<Flavor>> DeleteFlavor(int id)
         {

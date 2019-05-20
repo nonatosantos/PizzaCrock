@@ -8,7 +8,7 @@ namespace PizzaCrock.Domain.Entities
         {
             Description = description;
             AdditionalMinutes = additionalMinutes;
-        }   
+        }
 
        
         public string Description { get; private set; }

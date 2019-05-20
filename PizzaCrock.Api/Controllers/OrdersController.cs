@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PizzaCrock.Domain.Busines;
 using PizzaCrock.Domain.Entities;
 using PizzaCrock.Domain.ViewModels;
-using PizzaCrock.Infra;
 using PizzaCrock.Infra.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -13,12 +11,11 @@ namespace PizzaCrock.Api.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly PizzaCrockDbContext _context;
+     
         private readonly OrderRepository _repository;
 
-        public OrdersController(PizzaCrockDbContext context, OrderRepository repository)
-        {
-            _context = context;
+        public OrdersController( OrderRepository repository)
+        {           
             _repository = repository;
         }
 
@@ -54,31 +51,6 @@ namespace PizzaCrock.Api.Controllers
 
             return  CreatedAtAction("GetOrder", new { id = order.Id }, order.DateOrder);
         }
-        /*
-        [HttpPost]
-        public async Task<ActionResult<Size>> PostOrder(Order order)
-        {
-            _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetOrder", new { id = order.Id }, order);
-        }
-
-    */
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Order>> DeleteOrder(int id)
-        {
-            var order = await _context.Orders.FindAsync(id);
-            if (order == null)
-            {
-                return NotFound();
-            }
-
-            _context.Orders.Remove(order);
-            await _context.SaveChangesAsync();
-
-            return order;
-        }
-   
+        
     }
 }

@@ -19,14 +19,14 @@ namespace PizzaCrock.Api.Controllers
             _context = context;
         }
 
-        // GET: api/Sizes
+    
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Size>>> GetSizes()
         {
             return await _context.Sizes.ToListAsync();
         }
 
-        // GET: api/Sizes/5
+  
         [HttpGet("{id}")]
         public async Task<ActionResult<Size>> GetSize(int id)
         {
@@ -40,7 +40,6 @@ namespace PizzaCrock.Api.Controllers
             return size;
         }
 
-        // PUT: api/Sizes/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSize(int id, Size size)
         {
@@ -70,7 +69,7 @@ namespace PizzaCrock.Api.Controllers
             return NoContent();
         }
 
-        // POST: api/Sizes
+     
         [HttpPost]
         public async Task<ActionResult<Size>> PostSize(Size size)
         {
@@ -80,7 +79,7 @@ namespace PizzaCrock.Api.Controllers
             return CreatedAtAction("GetSize", new { id = size.Id }, size);
         }
 
-        // DELETE: api/Sizes/5
+       
         [HttpDelete("{id}")]
         public async Task<ActionResult<Size>> DeleteSize(int id)
         {

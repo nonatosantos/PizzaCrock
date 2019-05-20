@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PizzaCrock.Domain.Entities;
 using PizzaCrock.Infra;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace PizzaCrock.Api.Controllers
 {
@@ -21,14 +19,14 @@ namespace PizzaCrock.Api.Controllers
             _context = context;
         }
 
-        // GET: api/Additionals
+   
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Additional>>> GetAdditionals()
         {
             return await _context.Additionals.ToListAsync();
         }
 
-        // GET: api/Additionals/5
+ 
         [HttpGet("{id}")]
         public async Task<ActionResult<Additional>> GetAdditional(int id)
         {
@@ -42,7 +40,7 @@ namespace PizzaCrock.Api.Controllers
             return additional;
         }
 
-        // PUT: api/Additionals/5
+      
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAdditional(int id, Additional additional)
         {
@@ -72,7 +70,7 @@ namespace PizzaCrock.Api.Controllers
             return NoContent();
         }
 
-        // POST: api/Additionals
+     
         [HttpPost]
         public async Task<ActionResult<Additional>> PostAdditional(Additional additional)
         {
@@ -82,7 +80,7 @@ namespace PizzaCrock.Api.Controllers
             return CreatedAtAction("GetAdditional", new { id = additional.Id }, additional);
         }
 
-        // DELETE: api/Additionals/5
+      
         [HttpDelete("{id}")]
         public async Task<ActionResult<Additional>> DeleteAdditional(int id)
         {

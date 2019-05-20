@@ -9,8 +9,7 @@ namespace PizzaCrock.Domain.Entities
             SizeValue = sizeValue;
             Price = price;
             PreparationTime = preparationTime;
-        }
-    
+        }    
 
         public string SizeValue { get; private set; }
         public decimal Price { get; private set; }
