@@ -1,8 +1,5 @@
 ﻿using PizzaCrock.Domain.Busines;
 using PizzaCrock.Domain.Entities;
-using PizzaCrock.Infra;
-using PizzaCrock.Infra.Repositories;
-using System.Collections.Generic;
 using Xunit;
 
 namespace PizzaCrock.Tests

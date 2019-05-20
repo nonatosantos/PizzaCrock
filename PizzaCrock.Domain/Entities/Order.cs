@@ -39,7 +39,5 @@ namespace PizzaCrock.Domain.Entities
             return   order.Additional.ToList();
         }
 
-
-
     }
 }

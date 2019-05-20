@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using PizzaCrock.Domain.Busines;
+﻿using Microsoft.EntityFrameworkCore;
 using PizzaCrock.Domain.Entities;
 using PizzaCrock.Domain.Repositories;
 using PizzaCrock.Domain.ViewModels;
@@ -19,10 +17,8 @@ namespace PizzaCrock.Infra.Repositories
             _context = context;
         }
 
-
-
         public void Add(Order order)
-        {                   
+        {
             _context.Orders.Add(order);
         }
 
@@ -51,15 +47,12 @@ namespace PizzaCrock.Infra.Repositories
                PreparationTime = x.Size.PreparationTime + x.Flavor.AdditionalMinutes + CalculateAdditionalTime()
                  })
 
-                 .AsNoTracking().ToList();     
-            
+                 .AsNoTracking().ToList();             
      
-        }
-     
+        }     
 
         public OrderViewModel GetById(int id)
         {
-
             return _context.Orders.AsNoTracking().Where(x => x.Id == id).Include(x => x.Size)
             .Include(x => x.Flavor)
             .Include(x => x.Additional)
@@ -105,7 +98,6 @@ namespace PizzaCrock.Infra.Repositories
             return time;
 
         }
-
 
     }
 }
