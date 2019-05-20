@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PizzaCrock.Domain.Busines;
 using PizzaCrock.Domain.Entities;
 using PizzaCrock.Domain.Repositories;
 using PizzaCrock.Domain.ViewModels;
@@ -21,7 +22,7 @@ namespace PizzaCrock.Infra.Repositories
 
 
         public void Add(Order order)
-        {
+        {                   
             _context.Orders.Add(order);
         }
 

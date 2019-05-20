@@ -14,3 +14,5 @@ C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2
 C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\obj\Debug\netcoreapp2.2\PizzaCrock.Domain.pdb
 C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.dll
 C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.dll
+C:\Users\nonat\source\repos\PizzaCrock\PizzaCrock.Domain\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Hosting.xml

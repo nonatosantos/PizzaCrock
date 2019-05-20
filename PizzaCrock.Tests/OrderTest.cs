@@ -1,4 +1,5 @@
-﻿using PizzaCrock.Domain.Entities;
+﻿using PizzaCrock.Domain.Busines;
+using PizzaCrock.Domain.Entities;
 using PizzaCrock.Infra;
 using PizzaCrock.Infra.Repositories;
 using System.Collections.Generic;
@@ -8,20 +9,20 @@ namespace PizzaCrock.Tests
 {
     public class OrderTest
     {
-        private Order _order;
-        private Size _size;
-        private Flavor _flavor;   
+        private Order _orderCalabresa;
+        private Size _sizeM;
+        private Flavor _flavorCalabresa;   
 
   
         public OrderTest()
-        {       
+        {
 
-            _flavor = new Flavor("Calabresa", 5);
-            _size = new Size("P", 20.00M, 20);
-            _order = new Order(_flavor.Id, _size.Id);            
-            _order.AddItem("Retirar Cebola",0,0);
-            _order.AddItem("Bordas Recheadas", 8, 0);
-            _order.AddItem("Extra Bacon", 1, 5.00m);
+            _sizeM = new Size("M", 20.00M, 20);
+            _flavorCalabresa = new Flavor("Calabresa", 20);
+            _orderCalabresa = new Order(0, 0);
+            _orderCalabresa.Flavor = _flavorCalabresa;
+            _orderCalabresa.Size = _sizeM;
+            _orderCalabresa.AddItem("Extra Bacon", 5, 5.00M);
 
         }
 
@@ -29,36 +30,41 @@ namespace PizzaCrock.Tests
         public void ExpectedPriceSize()
         {
             var expected = 20.00M;
-            Assert.Equal(expected, _size.Price);            
+            Assert.Equal(expected, _sizeM.Price);            
         }
 
         [Fact]
         public void ExpectedTimeSize()
         {
             var expected = 20;
-            Assert.Equal(expected, _size.PreparationTime);
+            Assert.Equal(expected, _sizeM.PreparationTime);
           
         }
 
         [Fact]
         public void CountAdditional()
         {
-            var expected = 3;
-            Assert.Equal(expected, _order.Additional.Count);
+            var expected = 1;
+            Assert.Equal(expected, _orderCalabresa.Additional.Count);
         }
 
         [Fact]
-        public void TotalAdditionals()
-        {
-            List<Additional> list = _order.GetTitens(_order);
+        public void TotalTimeAdditionals()
+        {        
+            var expected = 25;
+            Assert.Equal(expected, OrderBusines.CalculateTotalTime(_orderCalabresa));
+        }
 
-            var time = 0;
-            foreach(Additional orderTime in list)
-            {
-                time  = orderTime.AdditionalMinutes;
-            }
-            var expected = 8;
-            Assert.Equal(expected, time);
-        }  
+        [Fact]
+        public void TotalPrice()
+        {         
+           
+            var totalPrice = OrderBusines.CalculateTotalPrice(_orderCalabresa);
+            var expected = 25.00M;
+            Assert.Equal(expected, totalPrice);
+       
+        }
+
+     
     }
 }

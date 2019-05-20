@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PizzaCrock.Domain.Busines;
 using PizzaCrock.Domain.Entities;
 using PizzaCrock.Domain.ViewModels;
 using PizzaCrock.Infra;
@@ -46,13 +47,24 @@ namespace PizzaCrock.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Order>> PostOrder(Order order)
         {
-            _repository.Add(order);
-            await _repository.Save(order);
+         
+            _repository.Add(order);           
+            await _repository.Save(order);         
+    
 
-            return  CreatedAtAction("GetOrder", new { id = order.Id });
+            return  CreatedAtAction("GetOrder", new { id = order.Id }, order.DateOrder);
+        }
+        /*
+        [HttpPost]
+        public async Task<ActionResult<Size>> PostOrder(Order order)
+        {
+            _context.Orders.Add(order);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetOrder", new { id = order.Id }, order);
         }
 
-       
+    */
         [HttpDelete("{id}")]
         public async Task<ActionResult<Order>> DeleteOrder(int id)
         {

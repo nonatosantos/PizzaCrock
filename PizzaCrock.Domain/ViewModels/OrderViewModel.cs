@@ -18,9 +18,6 @@ namespace PizzaCrock.Domain.ViewModels
         public IList<Additional> Additionals { get; set; }
         public int AdditionalTime { get; set; }
 
-
-     
-
         private int TimeAdditional()
         {
             return Additionals.ToList().Sum(x => x.AdditionalMinutes);
@@ -30,5 +27,7 @@ namespace PizzaCrock.Domain.ViewModels
         {
             return Additionals.ToList().Sum(x => x.AdditionalPrice);
         }
+
+
     }
 }

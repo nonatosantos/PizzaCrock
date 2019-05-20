@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.Tools": "2.2.4",
           "PizzaCrock.Shared": "1.0.0",
+          "Microsoft.AspNetCore.Hosting": "2.2.0.0",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.0.0"
         },
         "runtime": {
@@ -404,6 +405,14 @@
           "PizzaCrock.Shared.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Hosting/2.2.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Hosting.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Mvc.Core/2.2.0.0": {
         "runtime": {
           "Microsoft.AspNetCore.Mvc.Core.dll": {
@@ -758,6 +767,11 @@
     },
     "PizzaCrock.Shared/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Hosting/2.2.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
